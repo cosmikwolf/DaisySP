@@ -1,0 +1,37 @@
+{
+    "name": "DaisySP",
+    "version": "0.0.1",
+    "description": "A Powerful, Open Source DSP Library in C++",
+    "keywords": "daisy, dsp, synth, electrosmith",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/electrosmith/DaisySP.git"
+    },
+    "license": "MIT",
+    "homepage": "https://www.electro-smith.com/daisy",
+    "frameworks": "*",
+    "platforms": "ststm32",
+    "build": {
+        "flags": [
+            "-mfloat-abi=hard",
+            "-I Source/Utility",
+            "-I Source/Drums",
+            "-I Source/Dynamics",
+            "-I Source/Effects",
+            "-I Source/Filters",
+            "-I Source/Noise",
+            "-I Source/PhysicalModeling",
+            "-I Source/Synthesis",
+            "-I Source"
+        ],
+        "srcDir": "Source",
+        "srcFilter": [
+            "+<*/*.cpp>",
+            "+<*/*.h>"
+        ],
+        "lib_deps": [
+            "libDaisy"
+        ]
+
+    }
+}
